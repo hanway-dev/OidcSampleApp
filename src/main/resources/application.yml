@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  max-http-request-header-size: 400000
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          oidc:
+            client-id:
+            client-secret:
+            scope: openid,profile
+            redirect-uri:
+        provider:
+          oidc:
+            issuer-uri:
+logging:
+  level:
+    root: INFO
+    org.springframework.security: DEBUG
